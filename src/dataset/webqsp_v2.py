@@ -109,7 +109,6 @@ class WebQSPDataset(Dataset):
 
         existing_edges_list = list(existing_edges_set)
         # 当正样本数量大于 max的时候，只取max，让LLM只学一部分内容
-        max_positive = 200
         if len(existing_edges_list) > max_positive:
             existing_edges_list = random.sample(existing_edges_list, max_positive)
 
